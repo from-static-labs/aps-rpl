@@ -8,55 +8,69 @@
     "version": "1.0.0",
     "attributes": {
       "metadata": {
-        "title": "Search | Globus",
-        "description": "This is an example of a basis Globus Search interface generated from a static.json file."
+        "title": "Search | RPL@APS",
+        "description": "This is the RPL project. Raf should fill in some details here!"
       },
       "content": {
-        "logo": {
-          "src": "https://www.usgs.gov/themes/custom/usgs_tantalum/usgs_logo.png",
-          "alt": "USGS – science for a changing world"
-        },
-        "headline": "ScienceBase Data Releases"
+        "headline": "RPL@APS"
+      },
+
+      "features": {
+        "authentication": true
       },
       "components": {
         "Result": {
-          "heading": "entries[0].content.title",
-          "summary": "entries[0].content.summary",
+          "heading": "entries[0].content.project_metadata.experiment",
+          "summary": "entries[0].content.subtitle",
           "fields": [
             {
-              "label": "Purpose",
-              "property": "entries[0].content.purpose"
+              "label": "Solver",
+              "property": "entries[0].content.project_metadata.solver"
             },
             {
-              "label": "Material Request Instructions",
-              "property": "entries[0].content.materialRequestInstructions"
+              "label": "Target Color",
+              "property": "entries[0].content.project_metadata.target_color",
+              "type": "rgba"
             },
             {
-              "label": "Tags",
-              "property": "entries[0].content.tags"
+              "label": "Best Color",
+              "property": "entries[0].content.project_metadata.best_so_far",
+              "type": "rgba"
+            },
+            {
+              "label": "Time to Best",
+              "property": "entries[0].content.project_metadata.time_to_best"
+            },
+            {
+              "label": "Total Time",
+              "property": "entries[0].content.project_metadata.total_time"
+            },
+            {
+              "label": "Convergence Graph",
+              "property": "entries[0].content.files[2].url",
+              "type": "image"
+            },
+            {
+              "label": "Solver",
+              "property": "entries[0].content.project_metadata.solver"
+            },
+            {
+              "label": "Workflow Steps",
+              "property": "entries[0].content.project_metadata.wf_steps"
             }
           ]
         }
       },
       "globus": {
+        "application": {
+          "client_id": "a0aa9215-e2d1-4ff8-9308-52bcc9b26a0a"
+        },
         "search": {
-          "index": "6d222eba-980f-410c-9a58-52a785d660ea",
+          "index": "aefcecc6-e554-4f8c-a25b-147f23091944",
           "facets": [
             {
-              "name": "Tags",
-              "field_name": "tags.name",
-              "type": "terms",
-              "size": 10
-            },
-            {
-              "name": "Categories",
-              "field_name": "browseCategories",
-              "type": "terms",
-              "size": 10
-            },
-            {
-              "name": "System Types",
-              "field_name": "systemTypes",
+              "name": "Creator",
+              "field_name": "dc.creators.creatorName",
               "type": "terms",
               "size": 10
             }
