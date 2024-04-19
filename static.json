@@ -14,10 +14,6 @@
       "content": {
         "headline": "RPL@APS"
       },
-
-      "features": {
-        "authentication": true
-      },
       "components": {
         "Result": {
           "heading": "entries[0].content.project_metadata.experiment",
@@ -63,7 +59,7 @@
       },
       "globus": {
         "application": {
-          "client_id": "a0aa9215-e2d1-4ff8-9308-52bcc9b26a0a"
+          "client_id": "7b29cd62-7df9-4d21-9d9c-29b2768355a4"
         },
         "search": {
           "index": "aefcecc6-e554-4f8c-a25b-147f23091944",
