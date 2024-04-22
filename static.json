@@ -11,6 +11,9 @@
         "title": "Search | RPL@APS",
         "description": "This is the RPL project. Raf should fill in some details here!"
       },
+      "features": {
+        "jsonata": true
+      },
       "content": {
         "headline": "RPL@APS"
       },
@@ -43,7 +46,7 @@
             },
             {
               "label": "Convergence Graph",
-              "property": "entries[0].content.files[2].url",
+              "property": "$replace(entries[0].content.files[filename='convergence_graph.png'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
               "type": "image"
             },
             {
