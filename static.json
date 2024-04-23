@@ -18,6 +18,28 @@
         "headline": "RPL@APS"
       },
       "components": {
+        "ResultListing": {
+          "fields": [
+            {
+              "label": "Target Color",
+              "property": "entries[0].content.project_metadata.target_color",
+              "type": "rgba"
+            },
+            {
+              "label": "Time to Best",
+              "property": "entries[0].content.project_metadata.time_to_best"
+            },
+            {
+              "label": "Best Color",
+              "property": "entries[0].content.project_metadata.best_so_far",
+              "type": "rgba"
+            },
+            {
+              "label": "Total Time",
+              "property": "entries[0].content.project_metadata.total_time"
+            }
+          ]
+        },
         "Result": {
           "heading": "entries[0].content.project_metadata.experiment",
           "summary": "entries[0].content.subtitle",
@@ -47,6 +69,16 @@
             {
               "label": "Convergence Graph",
               "property": "$replace(entries[0].content.files[filename='convergence_graph.png'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
+              "type": "image"
+            },
+            {
+              "label": "Plate 1",
+              "property": "$replace(entries[0].content.files[filename='plate_1.jpg'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
+              "type": "image"
+            },
+            {
+              "label": "Plate 2",
+              "property": "$replace(entries[0].content.files[filename='plate_2.jpg'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
               "type": "image"
             },
             {
